@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx playwright --version 2>&1)"
+    ]
+  }
+}
