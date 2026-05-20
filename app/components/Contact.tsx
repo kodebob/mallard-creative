@@ -33,7 +33,7 @@ export default function Contact() {
 
     try {
       // Replace YOUR_CONTACT_FORM_ID with your Formspree form ID
-      const res = await fetch("https://formspree.io/f/YOUR_CONTACT_FORM_ID", {
+      const res = await fetch("https://formspree.io/f/xqejpdaz", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
