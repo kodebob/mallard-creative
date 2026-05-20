@@ -1,29 +1,28 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+
+const MICROLINK = "https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=";
 
 const projects = [
   {
     name: "K&M Landscaping",
     url: "https://verdant-landscaping-dusky.vercel.app/",
     displayUrl: "verdant-landscaping-dusky.vercel.app",
+    screenshot: `${MICROLINK}https://verdant-landscaping-dusky.vercel.app/`,
     description:
       "Full custom Next.js website for a Pittsburgh landscaping company featuring an AI-powered landscape visualizer, video hero, service pages, and lead generation contact form.",
     tags: ["Next.js", "Tailwind", "Gemini AI", "Web Design"],
-    gradient: "from-[#0a1f0a] via-[#132813] to-[#0d2010]",
-    accentColor: "rgba(34, 197, 94, 0.15)",
-    label: "K&M Landscaping",
   },
   {
     name: "Agentaa",
     url: "https://www.agentaa.com/",
     displayUrl: "agentaa.com",
+    screenshot: `${MICROLINK}https://www.agentaa.com/`,
     description:
       "Modern web presence for an AI-powered platform, featuring clean design, strong brand identity, and conversion-focused layout.",
     tags: ["Web Design", "Brand Identity", "Development"],
-    gradient: "from-[#0a1628] via-[#0f1e38] to-[#0d1a35]",
-    accentColor: "rgba(99, 179, 237, 0.12)",
-    label: "Agentaa",
   },
 ];
 
@@ -61,44 +60,36 @@ export default function Portfolio() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative h-52 overflow-hidden"
+                className="block relative h-52 overflow-hidden bg-navy"
                 aria-label={`View ${project.name} live site`}
               >
-                {/* Background gradient */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`}
-                />
-                {/* Accent glow */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: `radial-gradient(ellipse at 30% 40%, ${project.accentColor} 0%, transparent 60%)`,
-                  }}
-                />
-
                 {/* Browser chrome */}
-                <div className="absolute top-0 inset-x-0 h-8 bg-black/40 backdrop-blur-sm flex items-center gap-2 px-3 border-b border-white/5">
+                <div className="absolute top-0 inset-x-0 z-10 h-8 bg-black/60 backdrop-blur-sm flex items-center gap-2 px-3 border-b border-white/5">
                   <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-red-400/50" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/50" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-green-400/50" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
                   </div>
-                  <div className="flex-1 mx-2 h-4 bg-white/8 rounded flex items-center px-2 overflow-hidden">
-                    <span className="text-white/40 text-[10px] font-mono tracking-tight truncate">
+                  <div className="flex-1 mx-2 h-4 bg-white/10 rounded flex items-center px-2 overflow-hidden">
+                    <span className="text-white/50 text-[10px] font-mono tracking-tight truncate">
                       {project.displayUrl}
                     </span>
                   </div>
                 </div>
 
-                {/* Project name watermark */}
-                <div className="absolute inset-0 mt-8 flex items-center justify-center">
-                  <span className="text-white/10 text-4xl font-black text-center px-4 leading-tight">
-                    {project.label}
-                  </span>
+                {/* Screenshot */}
+                <div className="absolute inset-0 top-8">
+                  <Image
+                    src={project.screenshot}
+                    alt={`${project.name} website screenshot`}
+                    fill
+                    className="object-cover object-top"
+                    unoptimized
+                  />
                 </div>
 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-navy/70">
+                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-navy/70">
                   <span className="text-gold font-bold text-sm tracking-[0.2em] uppercase">
                     View Live Site →
                   </span>
