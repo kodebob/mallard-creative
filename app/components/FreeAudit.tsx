@@ -93,10 +93,10 @@ export default function FreeAudit() {
                 <p className="text-red-400 text-sm">
                   Something went wrong. Email us directly at{" "}
                   <a
-                    href="mailto:mallardcreative@gmail.com"
+                    href="mailto:hello@mallardcreative.net"
                     className="underline"
                   >
-                    mallardcreative@gmail.com
+                    hello@mallardcreative.net
                   </a>
                 </p>
               )}

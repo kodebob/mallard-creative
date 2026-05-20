@@ -164,10 +164,10 @@ export default function Contact() {
                 <p className="text-red-400 text-sm">
                   Something went wrong. Email us at{" "}
                   <a
-                    href="mailto:mallardcreative@gmail.com"
+                    href="mailto:hello@mallardcreative.net"
                     className="underline text-gold"
                   >
-                    mallardcreative@gmail.com
+                    hello@mallardcreative.net
                   </a>
                 </p>
               )}
@@ -185,10 +185,10 @@ export default function Contact() {
           <p className="text-center text-steel/60 text-sm mt-8">
             Or reach us directly at{" "}
             <a
-              href="mailto:mallardcreative@gmail.com"
+              href="mailto:hello@mallardcreative.net"
               className="text-steel hover:text-gold transition-colors"
             >
-              mallardcreative@gmail.com
+              hello@mallardcreative.net
             </a>
           </p>
         </motion.div>

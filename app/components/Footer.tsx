@@ -47,10 +47,10 @@ export default function Footer() {
             © 2025 Mallard Creative. Pittsburgh, PA. All rights reserved.
           </p>
           <a
-            href="mailto:mallardcreative@gmail.com"
+            href="mailto:hello@mallardcreative.net"
             className="text-steel/50 text-xs hover:text-gold transition-colors"
           >
-            mallardcreative@gmail.com
+            hello@mallardcreative.net
           </a>
         </div>
       </div>
