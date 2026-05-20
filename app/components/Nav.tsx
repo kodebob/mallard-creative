@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import DuckLogo from "./DuckLogo";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,10 +29,9 @@ export default function Nav() {
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <a
           href="/"
-          className="flex items-center gap-2.5 text-gold hover:text-gold-light transition-colors"
+          className="text-xl font-black tracking-tight text-gold hover:text-gold-light transition-colors"
         >
-          <DuckLogo size={30} />
-          <span className="text-xl font-black tracking-tight">Mallard Creative</span>
+          Mallard Creative
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

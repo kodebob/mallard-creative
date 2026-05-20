@@ -1,4 +1,3 @@
-import DuckLogo from "./DuckLogo";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -16,10 +15,9 @@ export default function Footer() {
           <div className="max-w-xs">
             <a
               href="/"
-              className="flex items-center gap-2 text-gold mb-3"
+              className="text-xl font-black tracking-tight text-gold block mb-3"
             >
-              <DuckLogo size={26} />
-              <span className="text-xl font-black tracking-tight">Mallard Creative</span>
+              Mallard Creative
             </a>
             <p className="text-steel text-sm leading-relaxed">
               Built in Pittsburgh. Built to Perform.
