@@ -2,19 +2,29 @@ export default function DuckLogo({ size = 32 }: { size?: number }) {
   return (
     <svg
       width={size}
-      height={Math.round((size * 44) / 80)}
-      viewBox="0 0 80 44"
+      height={Math.round((size * 88) / 100)}
+      viewBox="0 0 100 88"
       fill="currentColor"
       aria-hidden="true"
     >
-      {/* Bill — overlaps slightly with head so fill is seamless */}
-      <path d="M1 12 L15 9 L15 19 L1 17 Z" />
-      {/* Head */}
-      <circle cx="24" cy="14" r="13" />
-      {/* Body — left edge overlaps head so no visible gap */}
-      <ellipse cx="50" cy="27" rx="24" ry="13" />
-      {/* Tail feather */}
-      <path d="M68 22 L76 12 L78 25 L72 33 Z" />
+      {/*
+        Rubber duck silhouette — clockwise from bill tip:
+        bill top edge → over round head → down neck (slight concave) →
+        wing bump → body right → bottom → left side → chin → bill tip (Z)
+      */}
+      <path d="
+        M 7 43
+        L 19 31
+        C 22 16, 36 7, 48 9
+        C 60 11, 66 24, 64 38
+        C 62 46, 68 42, 75 39
+        C 82 36, 88 40, 89 50
+        C 91 60, 87 76, 76 82
+        C 64 88, 38 88, 24 81
+        C 10 74, 9 58, 15 47
+        C 13 45, 10 44, 7 43
+        Z
+      " />
     </svg>
   );
 }
